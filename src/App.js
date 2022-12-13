@@ -8,7 +8,7 @@ export default function App() {
       <h1>Weather App</h1>
       <footer>
         This project was coded by{" "}
-        <a href="www.linkedin.com/in/sarahgillard3" target="_blank">
+        <a href="http://www.linkedin.com/in/sarahgillard3" target="_blank">
           Sarah Gillard
         </a>{" "}
         and is{" "}
