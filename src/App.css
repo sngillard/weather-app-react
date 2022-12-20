@@ -10,6 +10,12 @@
   background-color: rgb(247, 244, 244, 0.55);
 }
 
+@media (max-width: 400px) {
+  .App footer {
+    font-size: 6px;
+  }
+}
+
 a:link,
 a:visited,
 a:hover {
@@ -17,9 +23,25 @@ a:hover {
   color: rgb(14, 77, 146);
 }
 
+/*For width smaller than 450px */
 body {
+  width: 100%;
+  background-size: cover;
   background-image: url("acadia_sunset.jpeg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+}
+
+/*For width 450px and larger */
+@media only screen and (min-width: 450px) {
+  body {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-image: url("acadia_sunset.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
 }
