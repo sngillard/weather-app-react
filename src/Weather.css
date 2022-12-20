@@ -1,10 +1,9 @@
 .Weather {
   font-family: arial, sans-serif;
-  border: 1px solid #dadde1;
   padding: 16px;
-  border-radius: 4px;
-  color: rgb(135, 135, 135);
-  background-color: whitesmoke;
+  border-radius: 4px 4px 0px 0px;
+  color: black;
+  background-color: rgb(247, 244, 244, 0.55);
 }
 
 .Weather h1 {
@@ -47,4 +46,23 @@
   line-height: 1;
   top: -34px;
   margin-left: 5px;
+}
+
+.searchButton {
+  color: rgb(0, 0, 0, 0.6);
+  background-color: rgb(247, 244, 244, 0.55);
+  border-color: rgb(0, 0, 0, 0.55);
+  border-radius: 4px;
+}
+
+.searchForm {
+  color: rgb(0, 0, 0, 0.6);
+  background-color: rgb(247, 244, 244, 0.55);
+  border-color: rgb(0, 0, 0, 0.55);
+  border-radius: 4px;
+}
+
+.searchForm:focus {
+  border-color: rgb(247, 244, 244, 0.55);
+  box-shadow: black;
 }

@@ -5,7 +5,16 @@
 
 .App footer {
   font-size: 11px;
-  margin: 10px 0;
+  text-align: center;
+  border-radius: 0px 0px 4px 4px;
+  background-color: rgb(247, 244, 244, 0.55);
+}
+
+a:link,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: rgb(14, 77, 146);
 }
 
 body {
