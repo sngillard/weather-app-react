@@ -7,3 +7,10 @@
   font-size: 11px;
   margin: 10px 0;
 }
+
+body {
+  background-image: url("acadia_sunset.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
