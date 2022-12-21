@@ -82,8 +82,10 @@
     font-size: 14px;
   }
   .Weather canvas {
-    margin-top: -5px;
+    margin-top: 5px;
     margin-right: 2px;
+    width: 36px;
+    height: 36px;
   }
   .Weather .temperature {
     font-weight: bold;
@@ -103,13 +105,17 @@
     font-size: 14px;
     padding: 5px 0px;
   }
+  .searchForm {
+    font-size: 14px;
+    padding: 5px 5px;
+  }
 }
 
 @media (max-width: 280px) {
   .Weather h1 {
     font-size: 24px;
     font-weight: 100;
-    margin: 20px 0 0 0;
+    margin: 10px 0 0 0;
     line-height: 29px;
   }
   .Weather ul {
@@ -118,15 +124,18 @@
   }
   .Weather li {
     font-size: 12px;
+    margin-bottom: -5px;
   }
   .Weather canvas {
-    margin-top: -10px;
+    margin-top: 5px;
     margin-right: 2px;
+    width: 26px;
+    height: 28px;
   }
   .Weather .temperature {
     font-weight: bold;
     color: rgb(33, 33, 33);
-    font-size: 25px;
+    font-size: 28px;
     line-height: 64px;
     font-weight: 400;
   }
@@ -134,11 +143,15 @@
     font-size: 8px;
     position: relative;
     line-height: 1;
-    top: -12px;
+    top: -15px;
     margin-left: 0px;
   }
   .searchButton {
     font-size: 10px;
-    padding: 5px 0px;
+    padding: 3px 0px;
+  }
+  .searchForm {
+    font-size: 10px;
+    padding: 3px 3px;
   }
 }

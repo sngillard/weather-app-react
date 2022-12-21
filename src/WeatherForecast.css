@@ -14,10 +14,7 @@
 }
 
 @media (max-width: 280px) {
-  .WeatherForecast {
-    font-size: 12px;
-  }
   .WeatherForecast .row {
-    font-size: 10px;
+    font-size: 12px;
   }
 }

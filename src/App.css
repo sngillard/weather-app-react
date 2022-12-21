@@ -10,7 +10,13 @@
   background-color: rgb(247, 244, 244, 0.55);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
+  .App footer {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 280px) {
   .App footer {
     font-size: 6px;
   }
