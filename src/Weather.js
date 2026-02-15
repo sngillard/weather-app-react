@@ -7,6 +7,7 @@ import "./Weather.css";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  const [unit, setUnit] = useState("fahrenheit");
 
   function handleResponse(response) {
     setWeatherData({
@@ -14,10 +15,10 @@ export default function Weather(props) {
       coordinates: response.data.coordinates,
       city: response.data.city,
       date: new Date(response.data.time * 1000),
-      temperature: Math.round(response.data.temperature.current),
+      temperature: response.data.temperature.current,
       description: response.data.condition.description,
       icon: response.data.condition.icon,
-      realFeel: Math.round(response.data.temperature.feels_like),
+      realFeel: response.data.temperature.feels_like,
       wind: Math.round(response.data.wind.speed),
       humidity: response.data.temperature.humidity,
     });
@@ -61,8 +62,9 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-        <WeatherInfo data={weatherData} />
-        <WeatherForecast coordinates={weatherData.coordinates} />
+
+        <WeatherInfo data={weatherData} unit={unit} onUnitChange={setUnit} />
+        <WeatherForecast coordinates={weatherData.coordinates} unit={unit} />
       </div>
     );
   } else {

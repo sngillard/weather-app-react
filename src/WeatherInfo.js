@@ -4,6 +4,17 @@ import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
+  function toCelsius(f) {
+    return ((f - 32) * 5) / 9;
+  }
+
+  let realFeelValue =
+    props.unit === "fahrenheit"
+      ? Math.round(props.data.realFeel)
+      : Math.round(toCelsius(props.data.realFeel));
+
+  let realFeelUnit = props.unit === "fahrenheit" ? "F" : "C";
+
   return (
     <div className="WeatherInfo">
       <h1>{props.data.city}</h1>
@@ -21,13 +32,19 @@ export default function WeatherInfo(props) {
             </div>
 
             <div className="float-left">
-              <WeatherTemperature fahrenheit={props.data.temperature} />
+              <WeatherTemperature
+                fahrenheit={props.data.temperature}
+                unit={props.unit}
+                onUnitChange={props.onUnitChange}
+              />
             </div>
           </div>
         </div>
         <div className="col-6">
           <ul>
-            <li>Real Feel: {props.data.realFeel}°F</li>
+            <li>
+              Real Feel: {realFeelValue}°{realFeelUnit}
+            </li>
             <li>Humidity: {props.data.humidity}%</li>
             <li>Wind: {props.data.wind} mph</li>
           </ul>
